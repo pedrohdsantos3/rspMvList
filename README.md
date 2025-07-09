@@ -28,7 +28,7 @@ Certifique-se de ter instalado:
 
 ## ⚙️ Variáveis de ambiente
 
-Crie um arquivo `.env` na raiz com:
+Crie um arquivo `.env` na raiz utilizando o arquivo env.sample fornecido no repositório:
 
 ```
 DATABASE_URL="postgresql://postgres:postgres@localhost:5432/raspberry"
