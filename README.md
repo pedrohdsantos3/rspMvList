@@ -60,6 +60,8 @@ npm install
 
 ```bash
 npx prisma migrate deploy
+npx prisma db push
+
 ```
 
 ---
