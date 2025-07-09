@@ -43,7 +43,7 @@ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/raspberry"
 ## clonar o repositório
 
 ```bash
-npx prisma migrate deploy
+git clone git@github.com:pedrohdsantos3/rspMvList.git
 ```
 
 ---
