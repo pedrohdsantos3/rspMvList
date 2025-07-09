@@ -40,7 +40,7 @@ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/raspberry"
 
 ---
 
-## 🧱 Banco de Dados
+## Banco de Dados
 
 ```bash
 npx prisma migrate deploy
