@@ -71,7 +71,7 @@ npm run start:dev
 ```
 
 A API será exposta em:  
-👉 `http://localhost:3000`
+👉 `http://localhost:3002`
 
 ---
 
