@@ -40,7 +40,7 @@ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/raspberry"
 
 ---
 
-## Banco de Dados
+## clonar o repositório
 
 ```bash
 npx prisma migrate deploy
@@ -52,6 +52,14 @@ npx prisma migrate deploy
 
 ```bash
 npm install
+```
+
+---
+
+## Banco de Dados
+
+```bash
+npx prisma migrate deploy
 ```
 
 ---
