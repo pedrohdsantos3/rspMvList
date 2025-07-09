@@ -3,6 +3,7 @@ import { Test } from '@nestjs/testing';
 import * as request from 'supertest';
 import { AppModule } from '../../src/app.module';
 import { PrismaService } from '../../src/infrastructure/database/prisma.service';
+import { moviesFixture } from './fixtures/movies.fixtures';
 
 describe('Awards Interval Integration (e2e)', () => {
   let app: INestApplication;
@@ -15,43 +16,7 @@ describe('Awards Interval Integration (e2e)', () => {
 
     app = moduleRef.createNestApplication();
     prisma = moduleRef.get(PrismaService);
-
     await app.init();
-
-    await prisma.movie.deleteMany();
-
-    await prisma.movie.createMany({
-      data: [
-        {
-          year: 2002,
-          title: 'Movie A',
-          studios: 'Studio A',
-          producers: 'Matthew Vaughn',
-          winner: true,
-        },
-        {
-          year: 2015,
-          title: 'Movie B',
-          studios: 'Studio B',
-          producers: 'Matthew Vaughn',
-          winner: true,
-        },
-        {
-          year: 1990,
-          title: 'Movie C',
-          studios: 'Studio C',
-          producers: 'Joel Silver',
-          winner: true,
-        },
-        {
-          year: 1991,
-          title: 'Movie D',
-          studios: 'Studio D',
-          producers: 'Joel Silver',
-          winner: true,
-        },
-      ],
-    });
   });
 
   afterAll(async () => {
@@ -59,11 +24,18 @@ describe('Awards Interval Integration (e2e)', () => {
     await app.close();
   });
 
-  it('/awards/intervals (GET) should return correct min and max intervals', async () => {
+  beforeEach(async () => {
+    await prisma.movie.deleteMany();
+    await prisma.movie.createMany({ data: moviesFixture });
+  });
+
+  it('GET /awards/intervals should return correct min and max intervals', async () => {
     const response = await request(app.getHttpServer()).get(
       '/awards/intervals',
     );
+
     expect(response.status).toBe(200);
+
     expect(response.body).toEqual({
       min: [
         {

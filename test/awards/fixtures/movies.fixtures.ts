@@ -1,0 +1,51 @@
+export const moviesFixture = [
+  {
+    year: 2002,
+    title: 'Movie A',
+    studios: 'Studio A',
+    producers: 'Matthew Vaughn',
+    winner: true,
+  },
+  {
+    year: 2015,
+    title: 'Movie B',
+    studios: 'Studio B',
+    producers: 'Matthew Vaughn',
+    winner: true,
+  },
+  {
+    year: 1990,
+    title: 'Movie C',
+    studios: 'Studio C',
+    producers: 'Joel Silver',
+    winner: true,
+  },
+  {
+    year: 1991,
+    title: 'Movie D',
+    studios: 'Studio D',
+    producers: 'Joel Silver',
+    winner: true,
+  },
+  {
+    year: 2010,
+    title: 'Movie E',
+    studios: 'Studio E',
+    producers: 'Producer A, Producer B',
+    winner: true,
+  },
+  {
+    year: 2012,
+    title: 'Movie F',
+    studios: 'Studio F',
+    producers: 'Producer A, Producer B',
+    winner: true,
+  },
+  {
+    year: 2008,
+    title: 'Movie G',
+    studios: 'Studio G',
+    producers: 'Brian Grazer',
+    winner: true,
+  },
+];
