@@ -48,24 +48,6 @@ git clone git@github.com:pedrohdsantos3/rspMvList.git
 
 ---
 
-## 🧱 Instalação
-
-```bash
-npm install
-```
-
----
-
-## Banco de Dados
-
-```bash
-npx prisma migrate deploy
-npx prisma db push
-
-```
-
----
-
 ## 🛠️ Rodando a aplicação
 
 ```bash
